@@ -1,0 +1,58 @@
+data = '[{"name" : "Harry", "age" : "32"}]';
+// data = '[
+//     {
+//         "title":"Vehicle Routing CLI Application",
+//         "github":"https://github.com/heatherlock/VRP-algorithm",
+//         "tags": ["Java", "JavaFX", "Optimization", "Nearest Insertion", "CLI"],
+//         "body": "A CLI application that solves a vehicle routing problem for the WUG Postal Service Company. This is a class project written using the Python Standard Library. It finds an close to optimal schedule for the delivery of 40 packages dispersed on 3 trucks. The algorithm uess a Nearest Insertion algorithm to choose which truck to place a package and optimizes the route for each truck. It also contains a CLI to check the statuses of packages.",
+//         "img": "VRP.png",
+//         "type": "school"
+//     },
+//     {
+//         "title":"Scheduling Application",
+//         "github":"https://github.com/heatherlock/WhiteRabbitScheduling",
+//         "tags": ["Java", "JavaFX", "MySQL", "GUI"],
+//         "body": "A scheduling application.",
+//         "img": "VRP.png",
+//         "type": "school"
+//     },    
+//     {
+//         "title":"Inventory Management Application",
+//         "github":"https://github.com/heatherlock/WhiteRabbitScheduling",
+//         "tags": ["Java", "JavaFX", "GUI"],
+//         "body": "An inventory management application for products, their constituent parts, and their prices.",
+//         "img": "VRP.png",
+//         "type": "app"
+//     },    
+//     {
+//         "title":"Student Roster",
+//         "github":"https://github.com/heatherlock/StudentRoster",
+//         "tags": ["C++", "CLI"],
+//         "body": "A CLI application to manage a student roster.",
+//         "img": "VRP.png"
+//     },   
+//     {
+//         "title":"Chat Bot",
+//         "github":"https://github.com/heatherlock/frank",
+//         "tags": ["AIML"],
+//         "body": "A CLI application to manage a student roster.",
+//         "img": "VRP.png",
+//         "type": "app"
+//     },  
+//     {
+//         "title":"NFL Big Data Bowl 2021",
+//         "github":"https://www.kaggle.com/helo87/help-defense-performance-metrics",
+//         "tags": ["Python", "Keras", "Pandas", "NumPy", "Plotly", "Data Analysis"],
+//         "body": "A Kaggle notebook proposing novel Help Defense metrics for the National Football League.",
+//         "img": "VRP.png",
+//         "type": "hobby"
+//     },    
+//     {
+//         "title":"Triton's Go! Explorer's Log",
+//         "github":"https://tritons-go.web.app/",
+//         "tags": ["HTML", "CSS", "Javascript", "SCSS"],
+//         "body": "A Health Web App. It allows the user to set goals to create healthy habits and track their progress in acheiving them",
+//         "img": "VRP.png",
+//         "type": "hobby"
+//     }       
+// ]';

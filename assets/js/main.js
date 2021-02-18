@@ -158,6 +158,49 @@
     })
   }
 
+//   /* Resume Buttons */
+  document.getElementById("leftArrow").addEventListener("click", function() {
+    // Show Page 1
+    const p1c1 = document.getElementById("p1c1");
+    const p1c3 = document.getElementById("p1c2");
+    const rightArrow = document.getElementById("rightArrow");
+    p1c1.style.display = "block";
+    p1c2.style.display = "block";
+    rightArrow.style.display = "block";
+
+    // Hide Page 2
+    const p2c1 = document.getElementById("p2c1");
+    const p2c2 = document.getElementById("p2c2");
+    const leftArrow = document.getElementById("leftArrow");
+    p2c1.style.display = "none";
+    p2c2.style.display = "none";
+    leftArrow.style.display = "none";
+  });
+
+  document.getElementById("rightArrow").addEventListener("click", function() {
+    // Hide Page 1
+    const p1c1 = document.getElementById("p1c1");
+    const p1c2 = document.getElementById("p1c2");
+    const rightArrow = document.getElementById("rightArrow");
+    p1c1.style.display = "none";
+    p1c2.style.display = "none";
+    rightArrow.style.display = "none";
+
+    // Show Page 2
+    const p2c1 = document.getElementById("p2c1");
+    const p2c2 = document.getElementById("p2c2");
+    const leftArrow = document.getElementById("leftArrow");
+    p2c1.style.display = "block";
+    p2c2.style.display = "block";
+    leftArrow.style.display = "block";
+  });
+
+  /* Portfolio data */
+  fetch("./data/projects.json")
+  .then(response => {
+     return response.json();
+  })
+  .then(data => console.log(data));
   /**
    * Porfolio isotope and filter
    */
@@ -185,7 +228,6 @@
         });
       }, true);
     }
-
   });
 
   /**
@@ -193,23 +235,6 @@
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
   });
 
   /**

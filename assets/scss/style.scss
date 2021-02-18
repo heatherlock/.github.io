@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -127,11 +128,11 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     left: -300px;
   }
-
   #main {
     margin-left: 0;
   }
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -260,18 +261,19 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
   }
 }
+
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
-
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -298,7 +300,7 @@ section {
 }
 
 .section-title h2::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 50px;
@@ -431,7 +433,7 @@ section {
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: 0.9s;
+  transition: .9s;
   background-color: #149ddd;
 }
 
@@ -497,65 +499,73 @@ section {
 }
 
 /* arrow buttons */
+$ease: cubic-bezier(.2,1,.3,1);
+  
 .button-div {
   position: absolute;
   left: 50%;
-}
-.button-div svg {
-  width: 100px;
-  height: 50px;
-  margin: 0 2rem;
-  cursor: pointer;
-  overflow: visible;
-}
-.button-div svg polygon, .button-div svg path {
-  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-}
-.button-div svg:hover polygon, .button-div svg:hover path {
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-  fill: #1f5297;
-}
-.button-div svg:hover .arrow {
-  animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
-}
-.button-div svg:hover .arrow-fixed {
-  animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+  // transform: translate(-50%, -50%);
+  
+  svg {
+    width: 100px;
+    height: 50px;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+    polygon, path {
+      transition: all 0.5s $ease;
+    }
+    &:hover polygon, &:hover path {
+      transition: all 1s $ease;
+      fill: #1f5297;
+    }
+      
+    &:hover .arrow {
+      animation: arrow-anim 2.5s $ease infinite;
+    }
+    &:hover .arrow-fixed {
+      animation: arrow-fixed-anim 2.5s $ease infinite;
+    }
+  }
 }
 
 @keyframes arrow-anim {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  5% {
-    transform: translateX(-0.1rem);
-  }
-  100% {
-    transform: translateX(1rem);
-    opacity: 0;
-  }
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	5% {
+		transform: translateX(-0.1rem);
+	}
+	100% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
 }
+
 @keyframes arrow-fixed-anim {
-  5% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
+	5% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
 }
+
 .arrow-btn {
   background-color: Transparent;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   border: none;
-  cursor: pointer;
+  cursor:pointer;
   overflow: hidden;
-  outline: none;
-}
-.arrow-btn:hover, .arrow-btn:focus {
-  outline: none;
+  outline:none;
+
+  &:hover, &:focus {
+    outline:none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1023,7 +1033,7 @@ section {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1032,7 +1042,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #37b3ed;
 }
 
@@ -1044,6 +1054,7 @@ section {
     transform: rotate(360deg);
   }
 }
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -1052,6 +1063,7 @@ section {
     transform: rotate(360deg);
   }
 }
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -1089,15 +1101,14 @@ section {
   .breadcrumbs .d-flex {
     display: block !important;
   }
-
   .breadcrumbs ol {
     display: block;
   }
-
   .breadcrumbs ol li {
     display: inline-block;
   }
 }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1131,5 +1142,3 @@ section {
     padding-right: 20px 15px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
