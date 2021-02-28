@@ -195,12 +195,6 @@
     leftArrow.style.display = "block";
   });
 
-  /* Portfolio data */
-  fetch("./data/projects.json")
-  .then(response => {
-     return response.json();
-  })
-  .then(data => console.log(data));
   /**
    * Porfolio isotope and filter
    */
@@ -228,6 +222,7 @@
         });
       }, true);
     }
+
   });
 
   /**
@@ -235,6 +230,23 @@
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
+  });
+
+  /**
+   * Portfolio details slider
+   */
+  new Swiper('.portfolio-details-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
   });
 
   /**
