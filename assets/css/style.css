@@ -443,6 +443,7 @@ section {
 .cert {
   width: 30%;
   height: auto;
+  min-width: 400px;
   padding: 0px 60px 0px 60px;
 }
 
